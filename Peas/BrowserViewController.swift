@@ -13,7 +13,7 @@ class BrowserViewController: NSViewController, NSCollectionViewDelegate, NSColle
     @IBOutlet weak var collectionView: NSCollectionView!
     
     var imagesURL: Array<String>?
-    var data = ["w1", "w2", "w3", "w1", "w2", "w3", "w1", "w2", "w3", "w1", "w2", "w3", "w2", "w3", "w1", "w2", "w3", "w1", "w2", "w3", "w1", "w2", "w3", "w2", "w3", "w1", "w2", "w3", "w1", "w2", "w3", "w1", "w2", "w3", "w2", "w3", "w1", "w2", "w3", "w1", "w2", "w3", "w1", "w2", "w3", "w2", "w3", "w1", "w2", "w3", "w1", "w2", "w3", "w1", "w2", "w3", "w2", "w3", "w1", "w2", "w3", "w1", "w2", "w3", "w1", "w2", "w3", "w2", "w3", "w1", "w2", "w3", "w1", "w2", "w3", "w1", "w2", "w3"]
+    var sourceData: Array<String> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +45,7 @@ class BrowserViewController: NSViewController, NSCollectionViewDelegate, NSColle
     }
     
     func collectionView(_ collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
-        return data.count
+        return sourceData.count
     }
     
     func numberOfSections(in collectionView: NSCollectionView) -> Int {
@@ -60,7 +60,7 @@ class BrowserViewController: NSViewController, NSCollectionViewDelegate, NSColle
             return item
         }
         
-        collectionViewItem.setData(data[indexPath.item])
+        collectionViewItem.setData(sourceData[indexPath.item])
         
         return item
     }
@@ -82,7 +82,6 @@ class BrowserViewController: NSViewController, NSCollectionViewDelegate, NSColle
         
         let task = URLSession.shared.dataTask(with:URL(string: url)!) { (data, response, error) in
             if data != nil {
-//                let text = String(data: data!, encoding: .utf8)
                 let json = try? JSONSerialization.jsonObject(with: data!, options: []) as! Dictionary<String, Any>
 
                 let data = json?["data"] as! Array<Any>
@@ -97,6 +96,7 @@ class BrowserViewController: NSViewController, NSCollectionViewDelegate, NSColle
                 }
                 
                 print(images)
+                self.sourceData.append(contentsOf: images)
                 self.updateUI()
             }
         }

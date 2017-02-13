@@ -22,6 +22,10 @@ class PhotoCVItem: NSCollectionViewItem {
     
     func setData(_ title: String) {
         self.titleTF.stringValue = title
+        let url = title
+        
+        let image = NSImage(contentsOf: URL(string: url)!)
+        photoIV.image = image
     }
     
 }

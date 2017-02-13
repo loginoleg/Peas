@@ -45,8 +45,6 @@ class ViewController: NSViewController, WebFrameLoadDelegate {
     }
     
     func getSomething() {
-        
-        
         self.performSegue(withIdentifier: "toBrowserViewControllerSegue", sender: self)
 
     }

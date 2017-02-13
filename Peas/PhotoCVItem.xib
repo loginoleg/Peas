@@ -8,6 +8,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="PhotoCVItem" customModule="Peas" customModuleProvider="target">
             <connections>
+                <outlet property="photoIV" destination="HoZ-Ob-t8F" id="RxD-5r-v9t"/>
                 <outlet property="titleTF" destination="IbO-92-Ter" id="xtY-Vw-ww7"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
