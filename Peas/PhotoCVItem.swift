@@ -28,4 +28,10 @@ class PhotoCVItem: NSCollectionViewItem {
         photoIV.image = image
     }
     
+    
+    override func mouseDown(with event: NSEvent) {
+        
+    }
+    
+    
 }

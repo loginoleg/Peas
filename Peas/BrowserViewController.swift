@@ -12,6 +12,7 @@ class BrowserViewController: NSViewController, NSCollectionViewDelegate, NSColle
     
     @IBOutlet weak var collectionView: NSCollectionView!
     
+    @IBOutlet weak var searchBarTF: NSTextField!
     var imagesURL: Array<String>?
     var sourceData: Array<String> = []
     
@@ -23,6 +24,12 @@ class BrowserViewController: NSViewController, NSCollectionViewDelegate, NSColle
         getImagesBy()
     }
     
+    // MARK: - IBAction
+    
+    @IBAction func searchButtonAction(_ sender: Any) {
+        let tag: String = searchBarTF.stringValue
+        getImagesBy([tag])
+    }
     
     // MARK: - CollectionView
     
@@ -73,10 +80,14 @@ class BrowserViewController: NSViewController, NSCollectionViewDelegate, NSColle
     
     func getImagesBy(_ tags: Array<String>? = nil) {
         
+        guard tags != nil else {
+            return
+        }
+        
         let accessToken = NetworkManager.shared.accessToken
         
-        let tags = "surfinua"
-        let url = String(format: "https://api.instagram.com/v1/tags/%@/media/recent?access_token=%@", tags, accessToken!)
+//        let tags = "surfinua"
+        let url = String(format: "https://api.instagram.com/v1/tags/%@/media/recent?access_token=%@", (tags?.first)!, accessToken!)
         
         var images = [String]()
         

@@ -686,14 +686,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="450" height="303"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eem-N6-6G5">
-                                <rect key="frame" x="6" y="281" width="438" height="17"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="vfG-Dd-enn">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <scrollView wantsLayer="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4L9-Ns-HLb">
                                 <rect key="frame" x="0.0" y="0.0" width="450" height="281"/>
                                 <clipView key="contentView" drawsBackground="NO" id="4O7-cL-Cwo">
@@ -716,28 +708,49 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="8rA-pl-psQ">
-                                    <rect key="frame" x="234" y="1" width="15" height="143"/>
+                                    <rect key="frame" x="433" y="1" width="16" height="271"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
+                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sne-Aa-Eap">
+                                <rect key="frame" x="0.0" y="281" width="379" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="yHI-Ot-gFi">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="U0a-UL-0xV">
+                                <rect key="frame" x="373" y="275" width="83" height="32"/>
+                                <buttonCell key="cell" type="push" title="Search" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="KxG-q7-Yc6">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="searchButtonAction:" target="Wbd-JW-VjW" id="r8q-JE-tyz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="eem-N6-6G5" firstAttribute="leading" secondItem="T44-ZG-Ywk" secondAttribute="leading" constant="8" id="2SO-8J-sI6"/>
+                            <constraint firstItem="U0a-UL-0xV" firstAttribute="leading" secondItem="sne-Aa-Eap" secondAttribute="trailing" id="DP5-25-iNo"/>
                             <constraint firstAttribute="trailing" secondItem="4L9-Ns-HLb" secondAttribute="trailing" id="Hbx-av-Mja"/>
-                            <constraint firstItem="eem-N6-6G5" firstAttribute="top" secondItem="T44-ZG-Ywk" secondAttribute="top" constant="5" id="WWv-EH-0kU"/>
+                            <constraint firstItem="4L9-Ns-HLb" firstAttribute="top" secondItem="sne-Aa-Eap" secondAttribute="bottom" id="LMS-6s-GeH"/>
+                            <constraint firstItem="U0a-UL-0xV" firstAttribute="top" secondItem="T44-ZG-Ywk" secondAttribute="top" id="U7F-5h-R3l"/>
+                            <constraint firstItem="sne-Aa-Eap" firstAttribute="leading" secondItem="T44-ZG-Ywk" secondAttribute="leading" id="UGs-Hn-UaZ"/>
+                            <constraint firstAttribute="trailing" secondItem="U0a-UL-0xV" secondAttribute="trailing" id="b4U-hc-FrJ"/>
                             <constraint firstItem="4L9-Ns-HLb" firstAttribute="leading" secondItem="T44-ZG-Ywk" secondAttribute="leading" id="cME-YE-KSD"/>
                             <constraint firstAttribute="bottom" secondItem="4L9-Ns-HLb" secondAttribute="bottom" id="cnU-dq-2k4"/>
-                            <constraint firstItem="4L9-Ns-HLb" firstAttribute="top" secondItem="eem-N6-6G5" secondAttribute="bottom" id="rX5-IS-RdF"/>
-                            <constraint firstAttribute="trailing" secondItem="eem-N6-6G5" secondAttribute="trailing" constant="8" id="wuB-9e-M43"/>
+                            <constraint firstItem="sne-Aa-Eap" firstAttribute="top" secondItem="T44-ZG-Ywk" secondAttribute="top" id="sHD-71-S9C"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="Uvo-bS-SFV" id="6To-Hy-eo2"/>
+                        <outlet property="searchBarTF" destination="sne-Aa-Eap" id="Ivh-gz-eBg"/>
                     </connections>
                 </viewController>
                 <customObject id="e2S-XJ-Ujo" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="284" y="716"/>
+            <point key="canvasLocation" x="99" y="873"/>
         </scene>
     </scenes>
 </document>
