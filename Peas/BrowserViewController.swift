@@ -19,9 +19,16 @@ class BrowserViewController: NSViewController, NSCollectionViewDelegate, NSColle
     override func viewDidLoad() {
         super.viewDidLoad()
         NetworkManager.shared.accessToken = "2512426.c4f98c9.a819c7fd6b9a44a3b49d29226012690f"
-
+        
         configureCollectionView()
         getImagesBy()
+    }
+    
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        let storyboard = NSStoryboard(name: "Main", bundle: nil)
+        let authVC = storyboard.instantiateController(withIdentifier: "AuthenticationViewController")
+        presentViewControllerAsSheet(authVC as! NSViewController)
     }
     
     // MARK: - IBAction
@@ -42,12 +49,12 @@ class BrowserViewController: NSViewController, NSCollectionViewDelegate, NSColle
         flowLayout.minimumLineSpacing = 20.0
         
         collectionView.collectionViewLayout = flowLayout
-    
+        
         collectionView.dataSource = self
         collectionView.delegate = self
         
         view.wantsLayer = true
-
+        
         collectionView.layer?.backgroundColor = NSColor.blue.cgColor
     }
     
@@ -60,9 +67,9 @@ class BrowserViewController: NSViewController, NSCollectionViewDelegate, NSColle
     }
     
     func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
-    
+        
         let item = collectionView.makeItem(withIdentifier: "PhotoCVItem", for: indexPath)
-    
+        
         guard let collectionViewItem = item as? PhotoCVItem else {
             return item
         }
@@ -86,7 +93,7 @@ class BrowserViewController: NSViewController, NSCollectionViewDelegate, NSColle
         
         let accessToken = NetworkManager.shared.accessToken
         
-//        let tags = "surfinua"
+        //        let tags = "surfinua"
         let url = String(format: "https://api.instagram.com/v1/tags/%@/media/recent?access_token=%@", (tags?.first)!, accessToken!)
         
         var images = [String]()
@@ -94,7 +101,7 @@ class BrowserViewController: NSViewController, NSCollectionViewDelegate, NSColle
         let task = URLSession.shared.dataTask(with:URL(string: url)!) { (data, response, error) in
             if data != nil {
                 let json = try? JSONSerialization.jsonObject(with: data!, options: []) as! Dictionary<String, Any>
-
+                
                 let data = json?["data"] as! Array<Any>
                 
                 for item in data as! Array<Dictionary<String, Any>> {

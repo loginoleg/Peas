@@ -13,9 +13,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
-        
         NetworkManager.shared.authInstagram()
-        
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
