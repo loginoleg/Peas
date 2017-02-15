@@ -18,7 +18,7 @@ class AuthenticationViewController: NSViewController, WebFrameLoadDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let clientID = ""
+        let clientID = "c4f98c9753de4612b2c11568e60da182"
         let redirectURI = "http://github.com/loginoleg"
         
         let url: String = String(format: "https://api.instagram.com/oauth/authorize/?client_id=%@&redirect_uri=%@&response_type=token&scope=public_content", clientID, redirectURI)
@@ -33,7 +33,7 @@ class AuthenticationViewController: NSViewController, WebFrameLoadDelegate {
     func webView(_ sender: WebView!, didFinishLoadFor frame: WebFrame!) {
         
         if sender.mainFrameURL.contains(token) {
-            let rangeOfToken = sender.mainFrameURL.range(of: String(describing: token.characters.last), options: .backwards)
+            let rangeOfToken = sender.mainFrameURL.range(of: String(describing: "#"), options: .backwards)
             accessToken = sender.mainFrameURL.substring(from: (rangeOfToken?.upperBound)!)
             NetworkManager.shared.accessToken = accessToken
             self.dismiss(nil)

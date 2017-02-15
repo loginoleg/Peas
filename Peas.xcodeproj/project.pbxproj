@@ -8,19 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		812797781E4DBB2D00D59B53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812797771E4DBB2D00D59B53 /* AppDelegate.swift */; };
-		8127977A1E4DBB2D00D59B53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812797791E4DBB2D00D59B53 /* ViewController.swift */; };
 		8127977C1E4DBB2D00D59B53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8127977B1E4DBB2D00D59B53 /* Assets.xcassets */; };
 		8127977F1E4DBB2D00D59B53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8127977D1E4DBB2D00D59B53 /* Main.storyboard */; };
 		812797901E51C96F00D59B53 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8127978F1E51C96F00D59B53 /* NetworkManager.swift */; };
 		812797921E51ED6600D59B53 /* BrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812797911E51ED6600D59B53 /* BrowserViewController.swift */; };
 		812797951E51FCF400D59B53 /* PhotoCVItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812797931E51FCF400D59B53 /* PhotoCVItem.swift */; };
 		812797961E51FCF400D59B53 /* PhotoCVItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 812797941E51FCF400D59B53 /* PhotoCVItem.xib */; };
+		FEC104EC1E54E6FE00B0BFFD /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC104EB1E54E6FE00B0BFFD /* AuthenticationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		812797741E4DBB2D00D59B53 /* Peas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Peas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		812797771E4DBB2D00D59B53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		812797791E4DBB2D00D59B53 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8127977B1E4DBB2D00D59B53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8127977E1E4DBB2D00D59B53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		812797801E4DBB2D00D59B53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -28,6 +27,7 @@
 		812797911E51ED6600D59B53 /* BrowserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowserViewController.swift; sourceTree = "<group>"; };
 		812797931E51FCF400D59B53 /* PhotoCVItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCVItem.swift; sourceTree = "<group>"; };
 		812797941E51FCF400D59B53 /* PhotoCVItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoCVItem.xib; sourceTree = "<group>"; };
+		FEC104EB1E54E6FE00B0BFFD /* AuthenticationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,9 +61,9 @@
 			isa = PBXGroup;
 			children = (
 				812797771E4DBB2D00D59B53 /* AppDelegate.swift */,
-				812797791E4DBB2D00D59B53 /* ViewController.swift */,
 				812797911E51ED6600D59B53 /* BrowserViewController.swift */,
 				812797931E51FCF400D59B53 /* PhotoCVItem.swift */,
+				FEC104EB1E54E6FE00B0BFFD /* AuthenticationViewController.swift */,
 				812797941E51FCF400D59B53 /* PhotoCVItem.xib */,
 				8127978F1E51C96F00D59B53 /* NetworkManager.swift */,
 				8127977B1E4DBB2D00D59B53 /* Assets.xcassets */,
@@ -148,7 +148,7 @@
 			files = (
 				812797901E51C96F00D59B53 /* NetworkManager.swift in Sources */,
 				812797921E51ED6600D59B53 /* BrowserViewController.swift in Sources */,
-				8127977A1E4DBB2D00D59B53 /* ViewController.swift in Sources */,
+				FEC104EC1E54E6FE00B0BFFD /* AuthenticationViewController.swift in Sources */,
 				812797951E51FCF400D59B53 /* PhotoCVItem.swift in Sources */,
 				812797781E4DBB2D00D59B53 /* AppDelegate.swift in Sources */,
 			);
@@ -305,6 +305,7 @@
 				812797851E4DBB2D00D59B53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

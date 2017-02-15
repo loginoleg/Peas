@@ -18,7 +18,7 @@ class BrowserViewController: NSViewController, NSCollectionViewDelegate, NSColle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NetworkManager.shared.accessToken = "2512426.c4f98c9.a819c7fd6b9a44a3b49d29226012690f"
+//        NetworkManager.shared.accessToken = "2512426.c4f98c9.a819c7fd6b9a44a3b49d29226012690f"
         
         configureCollectionView()
         getImagesBy()
