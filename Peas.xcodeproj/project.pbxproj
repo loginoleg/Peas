@@ -63,17 +63,41 @@
 			isa = PBXGroup;
 			children = (
 				812797771E4DBB2D00D59B53 /* AppDelegate.swift */,
-				812797911E51ED6600D59B53 /* BrowserViewController.swift */,
-				FEC104ED1E56416000B0BFFD /* InstagramHelper.swift */,
-				812797931E51FCF400D59B53 /* PhotoCVItem.swift */,
-				FEC104EB1E54E6FE00B0BFFD /* AuthenticationViewController.swift */,
-				812797941E51FCF400D59B53 /* PhotoCVItem.xib */,
-				8127978F1E51C96F00D59B53 /* NetworkManager.swift */,
-				8127977B1E4DBB2D00D59B53 /* Assets.xcassets */,
-				8127977D1E4DBB2D00D59B53 /* Main.storyboard */,
-				812797801E4DBB2D00D59B53 /* Info.plist */,
+				FEC104F01E5646AD00B0BFFD /* ViewControllers */,
+				FEC104EF1E5646A700B0BFFD /* Core */,
+				FEC104F11E5646CD00B0BFFD /* Resources */,
 			);
 			path = Peas;
+			sourceTree = "<group>";
+		};
+		FEC104EF1E5646A700B0BFFD /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				FEC104ED1E56416000B0BFFD /* InstagramHelper.swift */,
+				8127978F1E51C96F00D59B53 /* NetworkManager.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		FEC104F01E5646AD00B0BFFD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				812797911E51ED6600D59B53 /* BrowserViewController.swift */,
+				FEC104EB1E54E6FE00B0BFFD /* AuthenticationViewController.swift */,
+				812797931E51FCF400D59B53 /* PhotoCVItem.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FEC104F11E5646CD00B0BFFD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				812797941E51FCF400D59B53 /* PhotoCVItem.xib */,
+				8127977D1E4DBB2D00D59B53 /* Main.storyboard */,
+				8127977B1E4DBB2D00D59B53 /* Assets.xcassets */,
+				812797801E4DBB2D00D59B53 /* Info.plist */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -20,6 +20,8 @@ class AuthenticationViewController: NSViewController, WebFrameLoadDelegate {
         
         let url: String = String(format: "https://api.instagram.com/oauth/authorize/?client_id=%@&redirect_uri=%@&response_type=token&scope=public_content", InstagramHelper.clientID, InstagramHelper.redirectURI)
         
+//        let url: String = "https://instagram.com/accounts/logout/"
+        
         let authRequest = URLRequest(url: URL(string: url)!)
         webView.mainFrame.load(authRequest)
         webView.frameLoadDelegate = self
