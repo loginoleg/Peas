@@ -28,7 +28,7 @@ class BrowserViewController: NSViewController, NSCollectionViewDelegate, NSColle
         super.viewDidAppear()
         let storyboard = NSStoryboard(name: "Main", bundle: nil)
         let authVC = storyboard.instantiateController(withIdentifier: "AuthenticationViewController")
-        presentViewControllerAsSheet(authVC as! NSViewController)
+        presentViewControllerAsSheet(authVC as! AuthenticationViewController)
     }
     
     // MARK: - IBAction

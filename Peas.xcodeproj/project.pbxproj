@@ -15,6 +15,7 @@
 		812797951E51FCF400D59B53 /* PhotoCVItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812797931E51FCF400D59B53 /* PhotoCVItem.swift */; };
 		812797961E51FCF400D59B53 /* PhotoCVItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 812797941E51FCF400D59B53 /* PhotoCVItem.xib */; };
 		FEC104EC1E54E6FE00B0BFFD /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC104EB1E54E6FE00B0BFFD /* AuthenticationViewController.swift */; };
+		FEC104EE1E56416000B0BFFD /* InstagramHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC104ED1E56416000B0BFFD /* InstagramHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		812797931E51FCF400D59B53 /* PhotoCVItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCVItem.swift; sourceTree = "<group>"; };
 		812797941E51FCF400D59B53 /* PhotoCVItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoCVItem.xib; sourceTree = "<group>"; };
 		FEC104EB1E54E6FE00B0BFFD /* AuthenticationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
+		FEC104ED1E56416000B0BFFD /* InstagramHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstagramHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			children = (
 				812797771E4DBB2D00D59B53 /* AppDelegate.swift */,
 				812797911E51ED6600D59B53 /* BrowserViewController.swift */,
+				FEC104ED1E56416000B0BFFD /* InstagramHelper.swift */,
 				812797931E51FCF400D59B53 /* PhotoCVItem.swift */,
 				FEC104EB1E54E6FE00B0BFFD /* AuthenticationViewController.swift */,
 				812797941E51FCF400D59B53 /* PhotoCVItem.xib */,
@@ -148,6 +151,7 @@
 			files = (
 				812797901E51C96F00D59B53 /* NetworkManager.swift in Sources */,
 				812797921E51ED6600D59B53 /* BrowserViewController.swift in Sources */,
+				FEC104EE1E56416000B0BFFD /* InstagramHelper.swift in Sources */,
 				FEC104EC1E54E6FE00B0BFFD /* AuthenticationViewController.swift in Sources */,
 				812797951E51FCF400D59B53 /* PhotoCVItem.swift in Sources */,
 				812797781E4DBB2D00D59B53 /* AppDelegate.swift in Sources */,
